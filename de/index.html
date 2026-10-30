@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Herolog – Dein Alltag als Rollenspiel</title>
+<meta name="description" content="Herolog macht deine Gewohnheiten zum Abenteuer: Erledige echte Quests, sammle XP und Gold und mach deinen Helden stärker.">
+<link rel="icon" href="../assets/icon.svg">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="./"><img src="../assets/icon.svg" alt=""><b>HEROLOG</b></a>
+    <nav class="lang"><a href="../" onclick="try{localStorage.setItem('herolog-lang','en')}catch(e){}">EN</a><a href="./" class="on" onclick="try{localStorage.setItem('herolog-lang','de')}catch(e){}">DE</a></nav>
+  </header>
+  <section class="hero">
+    <div>
+      <h1>Dein Alltag als Rollenspiel.</h1>
+      <p class="lead">Erledige echte Quests, sammle XP und Gold und mach deinen Helden stärker. Jeder kleine Schritt zählt.</p>
+      <a class="btn" href="#">Bald verfügbar <small>bei Google Play</small></a>
+    </div>
+    <div class="stage" data-heroes></div>
+  </section>
+  <section class="cards">
+    <div class="card"><span>⚔️</span><h3>Echte Quests</h3><p>Mach aus Gewohnheiten Quests: Wasser trinken, spazieren gehen, lesen, früh schlafen.</p></div>
+    <div class="card"><span>🗺️</span><h3>Abenteuer</h3><p>Jede Quest gibt Energie. Damit kämpfst du in einer Geschichte gegen schlechte Gewohnheiten.</p></div>
+    <div class="card"><span>🧙</span><h3>Dein Held</h3><p>Sammle Ausrüstung, schalte Outfits frei und gestalte deinen Helden so, wie du willst.</p></div>
+    <div class="card"><span>💛</span><h3>Fair & privat</h3><p>Kein Pay-to-Win, kein Game Over. Deine Daten bleiben auf deinem Handy.</p></div>
+  </section>
+</div>
+<footer><a href="datenschutz.html">Datenschutz</a> · <a href="impressum.html">Impressum</a></footer>
+<script src="../assets/chibi.js"></script>
+<script src="../assets/site.js"></script>
+</body>
+</html>

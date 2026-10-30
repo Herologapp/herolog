@@ -1,0 +1,38 @@
+/* Herolog Website: gleicher Look wie die App (Spielschrift, dicke Umrisse, harte Schatten) */
+:root{--gf:"Lilita One","Arial Black",Impact,sans-serif;--ink:#24172b;--paper1:#fff6dd;--paper2:#f0dcae;--sky1:#2f3aa8;--sky2:#6a5fe0;--sky3:#b08af2}
+*{box-sizing:border-box}
+html{background:var(--sky1)}
+body{margin:0;font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:#2b2350;background:linear-gradient(180deg,var(--sky1),var(--sky2) 45%,var(--sky3)) fixed;min-height:100vh}
+a{color:#3f47b8}
+.wrap{max-width:960px;margin:0 auto;padding:0 18px}
+header.top{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand img{width:44px;height:44px;border-radius:12px;box-shadow:0 3px 0 var(--ink)}
+.brand b{font:400 26px/1 var(--gf);color:#ffe07a;-webkit-text-stroke:5px var(--ink);paint-order:stroke fill}
+.lang{display:flex;gap:6px}
+.lang a{padding:5px 10px;border-radius:10px;border:2.5px solid var(--ink);background:#fff;box-shadow:0 3px 0 var(--ink);font:400 14px/1 var(--gf);color:var(--ink);text-decoration:none}
+.lang a.on{background:linear-gradient(#ffe98a,#f0a520)}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:center;padding:30px 0 40px}
+.hero h1{margin:0 0 12px;font:400 clamp(40px,7vw,64px)/1.02 var(--gf);color:#fff;-webkit-text-stroke:7px var(--ink);paint-order:stroke fill;text-shadow:0 6px 0 var(--ink)}
+.hero p.lead{margin:0 0 22px;font-size:19px;color:#f1efff;font-weight:600}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 22px;border-radius:18px;border:3px solid var(--ink);background:linear-gradient(#ffe98a,#f0a520 58%,#d9821a);box-shadow:0 6px 0 var(--ink);font:400 22px/1 var(--gf);color:#fff;-webkit-text-stroke:3px var(--ink);paint-order:stroke fill;text-decoration:none}
+.btn small{font:700 12px/1 system-ui;-webkit-text-stroke:0;color:var(--ink)}
+.stage{position:relative;display:grid;grid-template-columns:repeat(2,1fr);gap:4px;padding:16px;border-radius:28px;border:4px solid var(--ink);box-shadow:0 8px 0 var(--ink);background:radial-gradient(ellipse at 50% 80%,#fff8,#fff0 60%),linear-gradient(#8fd6ff,#5b8cff)}
+.stage svg{display:block;width:100%;height:auto;animation:bob 2.4s ease-in-out infinite}
+.stage div:nth-child(2) svg{animation-delay:-.6s}.stage div:nth-child(3) svg{animation-delay:-1.2s}.stage div:nth-child(4) svg{animation-delay:-1.8s}
+@keyframes bob{50%{transform:translateY(-6px)}}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;padding-bottom:40px}
+.card,.doc{background:#fff;border:3px solid var(--ink);border-radius:20px;box-shadow:0 5px 0 var(--ink)}
+.card{padding:18px}
+.card span{font-size:34px}
+.card h3{margin:6px 0 6px;font:400 20px/1.1 var(--gf);color:var(--ink)}
+.card p{margin:0;font-size:14px}
+.doc{padding:26px 24px;margin:20px 0 40px}
+.doc h1{margin:0 0 6px;font:400 34px/1.1 var(--gf);color:var(--ink)}
+.doc h2{margin:26px 0 6px;font:400 21px/1.2 var(--gf);color:var(--ink)}
+.doc .muted{color:#6f6a96;font-size:14px}
+.ph{background:#fff3a8;padding:0 4px;border-radius:4px}
+footer{padding:20px 0 40px;text-align:center;color:#fff;font-weight:600}
+footer a{color:#fff;margin:0 8px}
+@media(max-width:760px){.hero{grid-template-columns:1fr}.cards{grid-template-columns:1fr 1fr}}
+@media(max-width:440px){.cards{grid-template-columns:1fr}}
