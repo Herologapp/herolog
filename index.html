@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Herolog – Your daily life as an RPG</title>
+<meta name="description" content="Herolog turns your habits into an adventure: complete real-life quests, earn XP and gold, and make your hero stronger.">
+<link rel="icon" href="assets/icon.svg">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap">
+<link rel="stylesheet" href="assets/site.css">
+<script>
+  // German browsers are sent to the German page (unless the visitor picked a language before)
+  try {
+    const pick = localStorage.getItem("herolog-lang");
+    if (pick === "de" || (!pick && (navigator.language || "").toLowerCase().startsWith("de"))) location.replace("de/");
+  } catch (e) {}
+</script>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="./"><img src="assets/icon.svg" alt=""><b>HEROLOG</b></a>
+    <nav class="lang"><a href="./" class="on" onclick="try{localStorage.setItem('herolog-lang','en')}catch(e){}">EN</a><a href="de/" onclick="try{localStorage.setItem('herolog-lang','de')}catch(e){}">DE</a></nav>
+  </header>
+  <section class="hero">
+    <div>
+      <h1>Your daily life as an RPG.</h1>
+      <p class="lead">Complete real-life quests, earn XP and gold, and make your hero stronger. Every small step counts.</p>
+      <a class="btn" href="#">Coming soon <small>to Google Play</small></a>
+    </div>
+    <div class="stage" data-heroes></div>
+  </section>
+  <section class="cards">
+    <div class="card"><span>⚔️</span><h3>Real quests</h3><p>Turn your habits into quests: drink water, go for a walk, read, sleep on time.</p></div>
+    <div class="card"><span>🗺️</span><h3>Adventure</h3><p>Every quest gives energy. Use it to fight bad habits in a story full of monsters.</p></div>
+    <div class="card"><span>🧙</span><h3>Your hero</h3><p>Collect gear, unlock outfits and create a hero that looks just like you want.</p></div>
+    <div class="card"><span>💛</span><h3>Fair & private</h3><p>No pay-to-win, no game over. Your data stays on your phone.</p></div>
+  </section>
+</div>
+<footer><a href="privacy.html">Privacy Policy</a> · <a href="de/impressum.html">Legal notice</a></footer>
+<script src="assets/chibi.js"></script>
+<script src="assets/site.js"></script>
+</body>
+</html>
